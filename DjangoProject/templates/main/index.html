@@ -1,0 +1,34 @@
+{% extends 'main/shablon.html' %}
+
+{% block content %}
+    <div class="as">
+        <h1>Главная страница</h1>
+        <h2>{{ title }}</h2>
+        <p>Привет мой дорогой друг</p>
+        <button class="btn btn-warning">Люблю мир</button>
+
+    {% for i in array %}
+        <p>{{ i }}</p>
+    {% endfor %}
+
+    {{ obj.tema }}
+
+    {% for i in obj %}
+        <p>{{ i }}</p>
+    {% endfor %}
+
+    {% for i in obj.values %}
+        <p>{{ i }}</p>
+    {% endfor %}
+
+
+    {% for i in array %}
+        {% if i == 'тема' %}
+{#            {% filter upper %}#}
+                <p>{{ i|upper }}</p>
+{#            {% endfilter %}#}
+        {% endif %}
+    {% endfor %}
+    </div>
+
+{% endblock %}

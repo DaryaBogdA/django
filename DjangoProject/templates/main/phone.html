@@ -1,0 +1,10 @@
+{% extends 'main/shablon.html' %}
+
+{% block content %}
+    <div class="as">
+        <h1>{{ title }}</h1>
+        {% for key, value in obj.items %}
+            <p>{{ key }} {{ value }}</p>
+    {% endfor %}
+    </div>
+{% endblock %}
