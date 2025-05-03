@@ -3,9 +3,16 @@
 {% block content %}
     <div class="as">
     <h1>Новости</h1>
-        <h2></h2>
-        <p>Привет мой дорогой друг</p>
-        <button class="btn btn-warning">Люблю мир</button>
+    {% if news %}
+        {% for i in news %}
+        <div class="alert alert-warning">
+            <h3>{{i.title}}</h3>
+            <p>{{i.anons}}</p>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>НЕт записей</p>
+    {% endif %}
     </div>
 
 {% endblock %}
