@@ -10,6 +10,8 @@ class Article(models.Model):
         verbose_name = 'Новость'
         verbose_name_plural = 'Новости'
 
+    def get_absolute_url(self):
+        return f'/news/{self.id}/'
 
     def __str__(self):
         return self.title
