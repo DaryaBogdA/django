@@ -1,0 +1,12 @@
+{% extends 'main/shablon.html' %}
+{% block title %} {{ article.title }}{% endblock %}
+{% block content %}
+    <div class="as">
+    <h1>{{ article.title }}</h1>
+        <p>{{ article.date }}</p>
+    <p>{{ article.full_text }}</p>
+    <a href="{% url 'index' %}" class="btn btn-success">Назад</a>
+
+    </div>
+
+{% endblock %}
