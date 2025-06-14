@@ -1,0 +1,370 @@
+body{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    background-color: #cfc9cd;
+}
+.sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #c97dff;
+    color: white;
+    padding-top: 20px;
+    z-index: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #ff9cff;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #b67ccf;
+}
+
+main {
+    margin-left: 260px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1100;
+}
+.slider {
+    display: block;
+    margin: 89px auto 0;
+    width: 1000px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.block{
+    display: block;
+    margin: 40px auto 0;
+    background-color: #ff9cff;
+    text-align: center;
+    width: 1000px;
+    border-radius: 20px;
+}
+.block_2{
+    background-color: #ff3aff;
+    text-align: center;
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+}
+.conteiner {
+
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+.text{
+    font-size: 23px;
+    background-color: #ffc2fb;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.text_2{
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.network-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+    margin-top: 35px;
+}
+
+.network {
+    width: 50px;
+}
+
+.text_network {
+    font-size: 25px;
+}
+.text_style{
+    font-size: 22px;
+}
+.block_about{
+    font-size: 20px;
+    display: block;
+    margin: 40px auto 0;
+    background-color: #ff9cff;
+    padding: 25px;
+    width: 1000px;
+    border-radius: 20px;
+}
+span{
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    background-color: #fb64fb;
+    border-radius: 20px;
+}
+
+h1{
+    text-align: center;
+    font-size: 45px;
+}
+h3{
+    padding: 20px;
+    text-align: center;
+}
+h4{
+    padding: 20px;
+    text-align: center;
+}
+
+.btn_style{
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    background-color: #ffedf8;
+}
+.a_style {
+    border-radius: 20px;
+    margin: 0 auto;
+    display: inline-block;
+    background-color: #ffedf8;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.a_style:hover {
+    background-color: #ffc2fb;
+}
+
+.mr {
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.conteiner_2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.block_3 {
+    flex: 1 1 calc(33% - 20px);
+    max-width: 1000px;
+    background-color: #f8bbda;
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+}
+.block_4 {
+    flex: 1 1 calc(33% - 20px);
+    max-width: 1000px;
+    background-color: #f8bbda;
+    width: 300px;
+    /*height: 150px;*/
+    border-radius: 20px;
+}
+.modal {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1050;
+}
+
+.modal-backdrop {
+    z-index: 1040;
+}
+.qwerasdf {
+    flex: 1 1 calc(40% - 20px);
+    max-width: 1000px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #ff0082;
+}
+
+.custom-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.custom-list li {
+    background-color: #fdd5fd;
+    padding: 15px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.custom-list li:hover {
+    background-color: #d600ff;
+    transform: translateX(5px);
+}
+
+.custom-list li::before {
+    content: "✔";
+    color: #0017ff;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.center{
+    text-align: center;
+}
+.block_5{
+    background-color: #ff3aff;
+    width: 450px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Наследуем цвет от родителя */
+    display: block; /* Делаем ссылки блочными */
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-container a {
+    display: inline-block;
+}
+
+.gallery-container img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.about {
+    padding: 40px;
+}
+
+.cta {
+    background-color: #ff3aff;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #ff3aff;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* Центрирование формы */
+.registration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    width: 500px; /* Увеличили ширину */
+    padding: 25px; /* Чуть больше отступов */
+    background-color: #ff9cff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для формы */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Поля ввода */
+.text_3 {
+    width: 100%;
+    padding: 8px; /* Чуть меньше отступов */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Контейнер для пароля */
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* "Глазик" для просмотра пароля */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px; /* Чуть меньше значок */
+}

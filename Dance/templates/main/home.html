@@ -1,0 +1,230 @@
+{% extends 'main/shablon.html' %}
+{% load static %}
+{% block content %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+
+</style>
+
+
+    <img id="img" class="slider" src="{% static 'main/img/dance_1.jpg' %}">
+
+    <div class="block">
+        <p>Мы обучаем танцоров любого возраста</p>
+    </div>
+
+    <div class="conteiner">
+        <div class="block_2"><br>
+            <p>Мы танцуем на самых больших площадках страны</p><br>
+            <p class="text"> Минск-Арена </p>
+            <p class="text"> Стадион Динамo </p>
+            <p class="text"> Славянский базар </p>
+            <p class="text"> Площадб Герба и Флага </p>
+        </div>
+
+        <div class="block_2" style="background-color: #ef8cef"><br>
+            <p>Самые современные танцевальные стили и направления</p>
+            <p class="text_style">Мы обучаем самыми современными танцевальными направлениями: Jazz-Funk, Contemporary, High Heels, Girly Choreo, Vogue, Hip-Hop, Street Dance и др.</p>
+        </div>
+
+        <div class="block_2" style="background-color: #ff80c0"><br>
+            <p>Наши соц-сети</p>
+
+            <div class="network-container">
+                <a href="https://www.instagram.com/dance_studio.radiance/" target="_blank">
+                    <img src="{% static 'main/img/inst.png' %}" class="network">
+                </a>
+                <p class="text_network">Instagram</p>
+            </div>
+
+            <div class="network-container">
+                <a href="https://www.tiktok.com/" target="_blank">
+                    <img src="{% static 'main/img/tt.png' %}" class="network">
+                </a>
+                <p class="text_network">Tik tok</p>
+            </div>
+
+            <div class="network-container">
+                <a href="https://www.youtube.com/@radiancedancecrew7444" target="_blank">
+                    <img src="{% static 'main/img/youtube.png' %}" class="network">
+                </a>
+                <p class="text_network">YouTube</p>
+            </div>
+
+            <div class="network-container">
+                <a href="https://radiancedance.by/?fbclid=PAZXh0bgNhZW0CMTEAAacVxfxbfn53xzy9d9NhMfMPzGjQQ7U1mbDSSwM9c_9jL7lyF2MP8UDSpF1oZQ_aem_jY2pXyazwCROJEDeKGl7CA" target="_blank">
+                    <img src="{% static 'main/img/sait.png' %}" class="network">
+                </a>
+                <p class="text_network">Our site</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="about" class="block_about">
+    <span>О нас</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Radiance, в переводе с английского, «сияние».<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Студия танцев образована в 2014 году, и за это время
+        мы приняли участие в масштабных телевизионных
+        проектах на территории Республики Беларусь,
+        стали победителями и призерами множества
+        международных чемпионатов и соревнований.
+        Основатель и руководитель студии – человек
+        с тремя высшими образованиями: хореографическим, педагогическим и психологическим.<br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;В нашей студии могут обучаться не только дети от
+        4 до 18 лет, но и взрослые. Все занятия проводятся с
+        учетом индивидуальных потребностей каждого ученика.
+        Мы делаем акцент на развитии сильных сторон, а также
+        превращаем маленькие слабости в большие достоинства <br>
+    <button id="btn" class="btn">Читать подробнее...</button><br>
+    <div id="more_story" style="display: none">Интерес наших учеников увеличивается с каждой тренировкой,
+        поскольку занятия включают в себя не только танцы, но и
+        растяжку, фристайл, спортивные упражнения, и даже «фишки»
+        для развития памяти и внимания. Мы активно поддерживаем ЗОЖ,
+        поэтому родителям не нужно переживать о компании, в которой
+        находится их ребёнок. А взрослые смогут погрузиться в среду полезных привычек.
+
+        В нашей студии любят учеников не только на словах, но и на деле. У
+        нас нет конкуренции – только поддержка! В групповом чате мы
+        на связи 24/7, чтобы помочь и поддержать каждого. Мы регулярно
+        организуем выездные сборы и дополнительные развлекательные и
+        образовательные мероприятия. В «Radiance» мы не просто учим
+        танцам – мы создаем настоящую танцевальную семью.</div>
+
+    </div>
+
+
+   <div id="styles" class="block_about" style="background-color: #ff80c0">
+    <h1>Стили</h1><br>
+    <div class="conteiner_2">
+        {% for el in styles %}
+            <div class="block_3">
+                <h3>{{ el.name }}</h3>
+                <button class="btn_style" data-bs-toggle="modal" data-bs-target="#modal_{{ el.id }}">
+                    Подробнее
+                </button>
+            </div>
+
+            <div class="modal fade" id="modal_{{ el.id }}" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{ el.name }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h1>{{ el.name }}</h1>
+                            <p>{{ el.text }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+    <div class="block_about">
+        <span id="teachers">Наши Тренера</span><br>
+    <div class="conteiner_2">
+        {% for el in teachers %}
+            <div class="qwerasdf">
+                <h3 class="text">{{ el.all_name }}</h3>
+                <p>{{ el.about }}</p>
+                <h4>Направления:</h4>
+                <p>{{ el.directions }}</p>
+            </div>
+        {% endfor %}
+
+    </div>
+    </div>
+    <div class="block">
+        <span>Расписание</span>
+    </div>
+    <div class="conteiner">
+        <div class="block_5" style="background-color: #ff80c0"><br>
+            <h2 id="schedule" class="center">Понедельник</h2>
+            <ul class="custom-list">
+                <a href="{% url 'kids_dance' %}"><li>18:00 - 19:00 KIDS DANCE 4+</li></a>
+                    <a href="{% url 'all_styles' %}"><li>19:00 - 20:00 ALL STYLES 9-12</li></a>
+                    <a href="{% url 'rdc' %}"><li>20:00 - 22:00 RADIANCE CREW</li></a>
+            </ul>
+        </div>
+        <div class="block_5" style="background-color: #ff80c0"><br>
+            <h2 class="center">Вторник</h2>
+            <ul class="custom-list">
+                    <a href="{% url 'all_styles' %}"><li>10:00 - 11:00 ALL STYLES 9-12</li></a>
+                    <a href="{% url 'hiphop_7_9' %}"><li>18:00 - 19:00 hip-hop, современная хореография 7-9</li></a>
+                    <a href="{% url 'all_styles' %}"><li>19:00 - 20:00 ALL STYLES 12-16</li></a>
+                    <a href="{% url 'junior_team' %}"><li>20:00 - 21:00 ALL STYLES Юниорский основной состав</li></a>
+                    <a href="{% url 'adult_team' %}"><li>21:00 - 22:00 ALL STYLES Взрослая группа 18+</li></a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="conteiner">
+        <div class="block_5" style="background-color: #ff80c0"><br>
+            <h2 class="center">Четверг</h2>
+            <ul class="custom-list">
+                <a href="{% url 'all_styles' %}"><li>10:00 - 11:00 ALL STYLES 9-12</li></a>
+                <a href="{% url 'hiphop_7_9' %}"><li>18:00 - 19:00 hip-hop, современная хореография 7-9</li></a>
+                <a href="{% url 'all_styles' %}"><li>19:00 - 20:00 ALL STYLES 12-16</li></a>
+                <a href="{% url 'junior_team' %}"><li>20:00 - 21:00 ALL STYLES Юниорский основной состав</li></a>
+                <a href="{% url 'rdc' %}"><li>21:00 - 22:00 RADIANCE CREW</li></a>
+            </ul>
+        </div>
+        <div class="block_5" style="background-color: #ff80c0"><br>
+            <h2 class="center">Пятница</h2>
+            <ul class="custom-list">
+                <a href="{% url 'kids_dance' %}"><li>18:00 - 19:00 KIDS DANCE 4+</li></a>
+                <a href="{% url 'all_styles' %}"><li>19:00 - 20:00 ALL STYLES 9-12</li></a>
+                <a href="{% url 'rdc' %}"><li>20:00 - 21:00 RADIANCE CREW</li></a>
+                <a href="{% url 'adult_team' %}"><li>21:00 - 22:00 ALL STYLES Взрослая группа 18+</li></a>
+            </ul>
+        </div>
+    </div>
+
+    <div id="styles" class="block_about" style="background-color: #ff80c0">
+    <h1 >Абонементы</h1><br>
+    <div class="conteiner_2">
+        {% for el in prices %}
+            <div id="price" class="block_4">
+                <h4>{{ el.name }}</h4>
+                <p class="text_2">{{ el.summa }} рублей </p>
+                <a href="{% url 'registration' %}" class="a_style mr">Записаться</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+   <script>
+        let count = 1;
+        function update() {
+            if (count === 4) {
+                count = 1;
+            }
+            document.getElementById("img").src = `{% static 'main/img/dance_' %}${count}.jpg`;
+            count++;
+        }
+        setInterval(update, 6000);
+        update()
+
+        $('#btn').on('click', function (){
+            $("#more_story").slideToggle(500);
+        })
+    document.querySelectorAll('.sidebar a').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    });
+</script>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'main/shablon_2.html' %}
+{% load static %}
+{% block content %}
+    <div class="registration-container">
+        <h1>Регистрация</h1>
+        <form method="POST" class="registration-form">
+            {% csrf_token %}
+
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required class="text_3">
+
+            <label for="last_name">Фамилия:</label>
+            <input type="text" id="last_name" name="last_name" required class="text_3">
+
+            <label for="middle_name">Отчество:</label>
+            <input type="text" id="middle_name" name="middle_name" required class="text_3">
+
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone" required class="text_3" pattern="\+375?[0-9]{9}" placeholder="+375337588562">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required class="text_3">
+
+            <label for="password">Пароль:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" required class="text_3">
+                <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
+            </div>
+
+            <label for="confirm_password">Повторите пароль:</label>
+            <div class="password-container">
+                <input type="password" id="confirm_password" name="confirm_password" required class="text_3">
+                <span class="toggle-password" onclick="togglePassword('confirm_password')">👁️</span>
+            </div>
+
+            <button type="submit" class="btn_style mr">Записаться</button>
+        </form>
+    </div>
+
+    <script>
+        function togglePassword(fieldId) {
+            let field = document.getElementById(fieldId);
+            field.type = field.type === "password" ? "text" : "password";
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'main/shablon_2.html' %}
+{% load static %}
+{% block content %}
+    <br>
+    <div class="block">
+        <h1>RADIANCE CREW</h1>
+    </div>
+
+    <section class="about">
+        <h2>О нашей команде</h2>
+        <p>🔥 **RADIANCE CREW** — это основной состав студии, который танцует с момента её основания более 10 лет!  
+        Мы участвуем в соревнованиях, выступаем на крупных мероприятиях и постоянно совершенствуем свои навыки.  
+        Наши танцоры — настоящие профессионалы, готовые покорять сцены! 💃🕺</p>
+    </section>
+
+    <section class="gallery">
+        <h2>Фотографии выступлений</h2>
+        <div class="gallery-container">
+            <a href="{% static 'main/img/radiance_crew_1.jpg' %}" data-lightbox="dance-gallery">
+                <img src="{% static 'main/img/radiance_crew_1.jpg' %}" alt="Выступление 1">
+            </a>
+            <a href="{% static 'main/img/radiance_crew_2.jpg' %}" data-lightbox="dance-gallery">
+                <img src="{% static 'main/img/radiance_crew_2.jpg' %}" alt="Выступление 2">
+            </a>
+            <a href="{% static 'main/img/radiance_crew_3.jpg' %}" data-lightbox="dance-gallery">
+                <img src="{% static 'main/img/radiance_crew_3.jpg' %}" alt="Выступление 3">
+            </a>
+            <a href="{% static 'main/img/radiance_crew_4.jpg' %}" data-lightbox="dance-gallery">
+                <img src="{% static 'main/img/radiance_crew_4.jpg' %}" alt="Выступление 4">
+            </a>
+            <a href="{% static 'main/img/radiance_crew_5.jpg' %}" data-lightbox="dance-gallery">
+                <img src="{% static 'main/img/radiance_crew_5.jpg' %}" alt="Выступление 5">
+            </a>
+            <a href="{% static 'main/img/radiance_crew_6.jpg' %}" data-lightbox="dance-gallery">
+                <img src="{% static 'main/img/radiance_crew_6.jpg' %}" alt="Выступление 6">
+            </a>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Хотите стать частью команды?</h2>
+        <a href="{% url 'registration' %}" class="button">Записаться</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 RADIANCE CREW. Все права защищены.</p>
+    </footer>
+
+{% endblock %}
