@@ -18,8 +18,8 @@
         <li><a href="#teachers">Наши тренера</a></li>
         <li><a href="#schedule">Расписание</a></li>
         <li><a href="#price">Абонементы</a></li>
-        <li><a href="#">Запись</a></li>
-        <li><a href="#">Правила</a></li>
+        <li><a href="javascript:void(0)" onclick="window.location.href='/registration/'">Запись</a></li>
+        <li><a href="javascript:void(0)" onclick="window.location.href='/rules/'">Правила</a></li>
     </ul>
 </aside>
 
@@ -33,5 +33,17 @@
         {% block content %}
         {% endblock %}
     </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var registrationLink = document.querySelector('a[href="javascript:void(0)"]');
+        if (registrationLink) {
+            registrationLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = '/registration/';
+            });
+        }
+    });
+</script>
 </body>
 </html>

@@ -1,8 +1,9 @@
-body{
+body {
     font-family: 'Lobster', cursive;
     font-size: 30px;
     background-color: #cfc9cd;
 }
+
 .sidebar {
     display: flex;
     align-items: center;
@@ -50,6 +51,7 @@ main {
     width: 100%;
     z-index: 1100;
 }
+
 .slider {
     display: block;
     margin: 89px auto 0;
@@ -58,7 +60,8 @@ main {
     object-fit: cover;
     border-radius: 20px;
 }
-.block{
+
+.block {
     display: block;
     margin: 40px auto 0;
     background-color: #ff9cff;
@@ -66,13 +69,15 @@ main {
     width: 1000px;
     border-radius: 20px;
 }
-.block_2{
+
+.block_2 {
     background-color: #ff3aff;
     text-align: center;
     width: 300px;
     height: 500px;
     border-radius: 20px;
 }
+
 .conteiner {
 
     margin: 40px auto 0;
@@ -81,7 +86,8 @@ main {
     gap: 30px;
 
 }
-.text{
+
+.text {
     font-size: 23px;
     background-color: #ffc2fb;
     border-radius: 5px;
@@ -90,7 +96,8 @@ main {
     margin-left: 5px;
     margin-right: 5px;
 }
-.text_2{
+
+.text_2 {
     font-size: 25px;
     text-align: center;
     border-radius: 5px;
@@ -99,6 +106,7 @@ main {
     margin-left: 5px;
     margin-right: 5px;
 }
+
 .network-container {
     display: flex;
     align-items: center;
@@ -114,10 +122,12 @@ main {
 .text_network {
     font-size: 25px;
 }
-.text_style{
+
+.text_style {
     font-size: 22px;
 }
-.block_about{
+
+.block_about {
     font-size: 20px;
     display: block;
     margin: 40px auto 0;
@@ -126,7 +136,8 @@ main {
     width: 1000px;
     border-radius: 20px;
 }
-span{
+
+span {
     display: block;
     font-size: 50px;
     text-align: center;
@@ -134,25 +145,28 @@ span{
     border-radius: 20px;
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: 45px;
 }
-h3{
-    padding: 20px;
-    text-align: center;
-}
-h4{
+
+h3 {
     padding: 20px;
     text-align: center;
 }
 
-.btn_style{
+h4 {
+    padding: 20px;
+    text-align: center;
+}
+
+.btn_style {
     border-radius: 20px;
     margin: 0 auto;
     display: flex;
     background-color: #ffedf8;
 }
+
 .a_style {
     border-radius: 20px;
     margin: 0 auto;
@@ -183,6 +197,7 @@ h4{
     justify-content: center;
     gap: 20px;
 }
+
 .block_3 {
     flex: 1 1 calc(33% - 20px);
     max-width: 1000px;
@@ -191,6 +206,7 @@ h4{
     height: 150px;
     border-radius: 20px;
 }
+
 .block_4 {
     flex: 1 1 calc(33% - 20px);
     max-width: 1000px;
@@ -199,6 +215,7 @@ h4{
     /*height: 150px;*/
     border-radius: 20px;
 }
+
 .modal {
     position: fixed;
     top: 10%;
@@ -210,6 +227,7 @@ h4{
 .modal-backdrop {
     z-index: 1040;
 }
+
 .qwerasdf {
     flex: 1 1 calc(40% - 20px);
     max-width: 1000px;
@@ -245,10 +263,12 @@ h4{
     font-weight: bold;
     margin-right: 10px;
 }
-.center{
+
+.center {
     text-align: center;
 }
-.block_5{
+
+.block_5 {
     background-color: #ff3aff;
     width: 450px;
     height: 500px;
@@ -256,6 +276,7 @@ h4{
     display: flex;
     flex-direction: column;
 }
+
 a {
     text-decoration: none; /* Убираем подчеркивание */
     color: inherit; /* Наследуем цвет от родителя */
@@ -315,56 +336,96 @@ nav a {
     border-radius: 5px;
 }
 
-
-
-
-
-
-
-
-
-/* Центрирование формы */
 .registration-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 50px auto;
-    width: 500px; /* Увеличили ширину */
-    padding: 25px; /* Чуть больше отступов */
+    width: 500px;
+    padding: 25px;
     background-color: #ff9cff;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Стили для формы */
 .registration-form {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-/* Поля ввода */
 .text_3 {
     width: 100%;
-    padding: 8px; /* Чуть меньше отступов */
+    padding: 8px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
-/* Контейнер для пароля */
 .password-container {
     display: flex;
     align-items: center;
     position: relative;
 }
 
-/* "Глазик" для просмотра пароля */
 .toggle-password {
     position: absolute;
     right: 10px;
     cursor: pointer;
-    font-size: 18px; /* Чуть меньше значок */
+    font-size: 18px;
+}
+
+.field-error {
+    color: #ff0a00;
+    font-size: 13px;
+    list-style: none;
+    margin: -10px 0 10px 0;
+    min-height: 18px;
+}
+
+.rules-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rules-container h1 {
+    text-align: center;
+    color: #b563ff;
+    margin-bottom: 30px;
+}
+
+.rules-section {
+    margin-bottom: 30px;
+}
+
+.rules-section h2 {
+    color: #b563ff;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.rules-section ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.rules-section li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.rules-section li:before {
+    content: "•";
+    color: #b563ff;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: -5px;
 }
